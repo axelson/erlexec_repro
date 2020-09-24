@@ -1,21 +1,10 @@
 # ErlexecRepro
 
-**TODO: Add description**
+Reproduces erlexec bug: https://github.com/saleyn/erlexec/issues/136
 
-## Installation
+To reproduce run:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `erlexec_repro` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:erlexec_repro, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/erlexec_repro](https://hexdocs.pm/erlexec_repro).
-
+    mix deps.get
+    mix test
+    
+The test should hang around number 741 by default
